@@ -7,6 +7,7 @@ import Card from '../../components/ui/Card';
 import PhoneInput from '../../components/auth/PhoneInput';
 import Button from '../../components/ui/Button';
 import ErrorMessage from '../../components/ui/ErrorMessage';
+import { auth } from '../../firebase/firebase';
 
 export const Login: React.FC = () => {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ export const Login: React.FC = () => {
 
   const [phone, setPhone] = useState('');
   const [validationError, setValidationError] = useState<string | null>(null);
-
+  console.log("auth",auth)
   // Clear errors when mounting or typing
   useEffect(() => {
     dispatch(clearError());

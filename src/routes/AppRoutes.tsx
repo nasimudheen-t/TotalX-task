@@ -7,6 +7,8 @@ import Registration from '../pages/Registration/Registration';
 import Home from '../pages/Home/Home';
 import NotFound from '../pages/NotFound/NotFound';
 
+
+
 // Guard for unauthenticated pages (Login, Verify)
 const PublicRoute: React.FC<{ children: React.ReactElement }> = ({ children }) => {
   const { isAuthenticated } = useAppSelector((state) => state.auth);
