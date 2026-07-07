@@ -72,6 +72,7 @@ export const verifyOtp = createAsyncThunk<VerifyOtpResponse, string, { state: { 
       }
 
       const users = getMockUsers();
+      console.log("user",users)
       const user = users[phone] || null;
 
       return {
