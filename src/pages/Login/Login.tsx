@@ -54,6 +54,7 @@ export const Login: React.FC = () => {
   const activeError = validationError || reduxError;
 
   return (
+   <>
     <PageContainer centered={false} className="p-0 bg-white min-h-screen">
       <main className="w-full min-h-screen flex items-center justify-center px-5 sm:px-10 py-8">
         <div className="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -121,7 +122,7 @@ export const Login: React.FC = () => {
           </div>
 
           {/* RIGHT: Illustration panel */}
-          <div className="hidden lg:flex items-center justify-center bg-slate-50 rounded-3xl p-10 h-[420px]">
+          <div   className="hidden lg:flex items-center justify-center bg-slate-50 rounded-3xl p-10 h-[420px]">
             <svg
               viewBox="0 0 260 300"
               className="w-56 h-auto"
@@ -197,10 +198,13 @@ export const Login: React.FC = () => {
                 <ellipse cx="75" cy="8" rx="15" ry="10" fill="#fcd9b8" />
               </g>
             </svg>
+           
           </div>
         </div>
       </main>
     </PageContainer>
+     <div id="recaptcha-container" className="hidden"></div>
+   </>
   );
 };
 
